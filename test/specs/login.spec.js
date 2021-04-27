@@ -11,8 +11,8 @@ describe('Auth', () => {
     });
 
     it('user logs in with valid data', () => {
-        LoginPage.setLogin('xonol63306@gameqo.com');
-        LoginPage.setPassword('Qwerty!234');
+        LoginPage.setLogin('jimbim77@mailinator.com');
+        LoginPage.setPassword('System23');
         LoginPage.clickSubmitButton();
         ProfilePage.isOpen();
     });
