@@ -4,6 +4,7 @@
   "description": "WebdriverIO tests example",
   "scripts": {
     "test:chrome": "npx wdio run chrome.conf.js",
+    "test:chrome:headless": "npx wdio run chrome.headless.conf.js",
     "test:firefox": "npx wdio run firefox.conf.js",
     "report:serve": "npx allure serve allure-results",
     "report:generate": "npx allure generate allure-results -o allure-report --clean",
