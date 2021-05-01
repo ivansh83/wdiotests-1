@@ -11,8 +11,8 @@ describe('Auth', () => {
     });
 
     it('user logs in with valid data', () => {
-        LoginPage.setLogin('jimbim77@mailinator.com');
-        LoginPage.setPassword('System23');
+        LoginPage.setLogin(process.env.LOGIN);
+        LoginPage.setPassword(process.env.PASSWORD);
         LoginPage.clickSubmitButton();
         ProfilePage.isOpen();
     });

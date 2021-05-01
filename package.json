@@ -28,6 +28,7 @@
     "@wdio/spec-reporter": "^7.1.1",
     "@wdio/sync": "^7.1.1",
     "allure-commandline": "^2.13.8",
+    "dotenv": "^8.2.0",
     "geckodriver": "^1.22.2",
     "wdio-geckodriver-service": "^1.1.2"
   }
