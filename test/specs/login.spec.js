@@ -10,27 +10,27 @@ describe('Auth', () => {
         browser.execute('window.localStorage.clear()');
     });
 
-    it('user logs in with valid data', () => {
-        LoginPage.setLogin(process.env.LOGIN);
-        LoginPage.setPassword(process.env.PASSWORD);
-        LoginPage.clickSubmitButton();
-        ProfilePage.isOpen();
+    it('user logs in with valid data', async () => {
+        await LoginPage.setLogin(process.env.LOGIN);
+        await LoginPage.setPassword(process.env.PASSWORD);
+        await LoginPage.clickSubmitButton();
+        await ProfilePage.isOpen();
     });
 
-    it('submit button is disabled if login and password are absent', () => {
-        LoginPage.submitButtonIsDisabled();
+    it('submit button is disabled if login and password are absent', async () => {
+        await LoginPage.submitButtonIsDisabled();
     });
 
-    it('fails if invalid data provided', () => {
-        LoginPage.setLogin('example@example.com');
-        LoginPage.setPassword('123456');
-        LoginPage.clickSubmitButton();
-        LoginPage.errorToastAppeared();
+    it('fails if invalid data provided', async () => {
+        await LoginPage.setLogin('example@example.com');
+        await LoginPage.setPassword('123456');
+        await LoginPage.clickSubmitButton();
+        await LoginPage.errorToastAppeared();
     });
 
-    it('login input is required', () => {
-        LoginPage.setLogin('example');
-        LoginPage.emptyLoginInput();
-        LoginPage.loginRequiredError();
+    it('login input is required', async () => {
+        await LoginPage.setLogin('example');
+        await LoginPage.emptyLoginInput();
+        await LoginPage.loginRequiredError();
     });
 });
